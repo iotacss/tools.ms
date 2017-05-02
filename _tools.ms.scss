@@ -1,0 +1,56 @@
+// Modular Scale Tool
+
+
+
+
+// Options
+
+$iota-ms-ratio  : 1.2 !default;
+$iota-ms-base   : 15px !default;
+$iota-ms-digits : 3 !default;
+
+
+
+
+// Helper functions
+
+@function _iota-decimal-round(
+  $number,
+  $digits: $iota-ms-digits
+) {
+  
+  $num: 1;
+  
+  @for $i from 1 through $digits {
+    $num: $num * 10;
+  }
+  
+  @return round( $number * $num ) / $num;
+  
+}
+
+
+
+
+@function iota-ms(
+  $increment,
+  $base   : $iota-ms-base,
+  $ratio  : $iota-ms-ratio,
+  $digits : $iota-ms-digits
+) {
+  
+  @if $increment > 0 {
+    @for $i from 1 through $increment {
+      $base: $base * $iota-ms-ratio;
+    }
+  }
+  
+  @if $increment < 0 {
+    @for $i from -1 through $increment {
+      $base: $base / $iota-ms-ratio;
+    }
+  }
+
+  @return _iota-decimal-round($base, $digits);
+
+}
