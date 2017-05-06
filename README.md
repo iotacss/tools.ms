@@ -18,6 +18,8 @@ $iota-tools-ms-ratio  : 1.2 !default;
 $iota-tools-ms-scale  : 3 !default;
 ```
 
+**Since v1.1.0, all variables have '$iota-tools-ms' instead of '$iota-ms' prefix and the '$iota-ms-digits' renamed to '$iota-tools-ms-scale'.**
+
 
 ### Function Syntax
 
@@ -36,8 +38,6 @@ $iota-tools-ms-scale  : 3 !default;
 * base: number - The base value the scale starts at. Defaults to  $iota-ms-base;
 * ratio: unitless number - The ratio the scale is built on. Defaults to $iota-ms-ratio.
 * scale: unitless number - Length of scale ( right part of the decimal point ) ms will be rounded to. Defaults to $iota-tools-ms-scale.
-
-**Since v1.1.0, all variables have '$iota-tools-ms' instead of '$iota-ms' prefix and the '$iota-ms-digits' renamed to '$iota-tools-ms-scale'.**
 
 
 ## Examples
