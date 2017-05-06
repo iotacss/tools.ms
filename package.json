@@ -1,6 +1,6 @@
 {
   "name": "iotacss-tools-ms",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Modular scale tool for iotaCSS",
   "main": "_tools.ms.scss",
   "repository": {
