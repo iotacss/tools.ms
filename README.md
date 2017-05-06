@@ -13,9 +13,9 @@ npm install --save iotacss-tools-ms
 ### Options
 
 ```scss
-$iota-ms-base   : 15px !default;
-$iota-ms-ratio  : 1.2 !default;
-$iota-ms-digits : 3 !default;
+$iota-tools-ms-base   : 15px !default;
+$iota-tools-ms-ratio  : 1.2 !default;
+$iota-tools-ms-scale  : 3 !default;
 ```
 
 
@@ -23,9 +23,9 @@ $iota-ms-digits : 3 !default;
 
 ```sass
 @include iota-ms($increment,
-  $base   : $iota-ms-base,
-  $ratio  : $iota-ms-ratio,
-  $digits : $iota-ms-digits
+  $base   : $iota-tools-ms-base,
+  $ratio  : $iota-tools-ms-ratio,
+  $scale  : $iota-tools-ms-scale
 );
 ```
 
@@ -35,7 +35,9 @@ $iota-ms-digits : 3 !default;
 * increment: unitless number - Number of steps to increment up or down the scale
 * base: number - The base value the scale starts at. Defaults to  $iota-ms-base;
 * ratio: unitless number - The ratio the scale is built on. Defaults to $iota-ms-ratio.
-* digits: unitless number - Number of digits the ms value will be rounded to. Defaults to $iota-ms-digits.
+* scale: unitless number - Length of scale ( right part of the decimal point ) ms will be rounded to. Defaults to $iota-tools-ms-scale.
+
+**Since v1.1.0, all variables have '$iota-tools-ms' instead of '$iota-ms' prefix and the '$iota-ms-digits' renamed to '$iota-tools-ms-scale'.**
 
 
 ## Examples
@@ -46,9 +48,9 @@ $iota-ms-digits : 3 !default;
 You can either adjust the default options:
 
 ```sass
-$iota-ms-base   : 16px;
-$iota-ms-ratio  : 1.5;
-$iota-ms-digits : 2;
+$iota-tools-ms-base   : 16px;
+$iota-tools-ms-ratio  : 1.5;
+$iota-tools-ms-scale  : 2;
 
 .h1 {
   font-size: iota-ms(2); // 36px

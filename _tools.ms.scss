@@ -5,9 +5,9 @@
 
 // Options
 
-$iota-ms-ratio  : 1.2 !default;
-$iota-ms-base   : 15px !default;
-$iota-ms-digits : 3 !default;
+$iota-tools-ms-ratio  : 1.2 !default;
+$iota-tools-ms-base   : 15px !default;
+$iota-tools-ms-scale  : 3 !default;
 
 
 
@@ -16,7 +16,7 @@ $iota-ms-digits : 3 !default;
 
 @function _iota-decimal-round(
   $number,
-  $digits: $iota-ms-digits
+  $digits: $iota-tools-ms-scale
 ) {
   
   $num: 1;
@@ -34,23 +34,23 @@ $iota-ms-digits : 3 !default;
 
 @function iota-ms(
   $increment,
-  $base   : $iota-ms-base,
-  $ratio  : $iota-ms-ratio,
-  $digits : $iota-ms-digits
+  $base   : $iota-tools-ms-base,
+  $ratio  : $iota-tools-ms-ratio,
+  $scale  : $iota-tools-ms-scale
 ) {
   
   @if $increment > 0 {
     @for $i from 1 through $increment {
-      $base: $base * $iota-ms-ratio;
+      $base: $base * $iota-tools-ms-ratio;
     }
   }
   
   @if $increment < 0 {
     @for $i from -1 through $increment {
-      $base: $base / $iota-ms-ratio;
+      $base: $base / $iota-tools-ms-ratio;
     }
   }
 
-  @return _iota-decimal-round($base, $digits);
+  @return _iota-decimal-round($base, $scale);
 
 }
