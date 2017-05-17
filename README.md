@@ -1,3 +1,5 @@
+**iotaCSS is now a monorepo and all individual repositories are part of it. Please open issues or PRs here: [https://github.com/iotacss/iotacss](https://github.com/iotacss/iotacss).**
+
 # Modular Scale Tool
 
 The Modular Scale tool contains a function that helps you create sizes based on modular scale.
